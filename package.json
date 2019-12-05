@@ -1,0 +1,9 @@
+{
+  "name": "advent-of-code",
+  "description": "Advent of Code",
+  "license": "MIT",
+  "repository": {},
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
