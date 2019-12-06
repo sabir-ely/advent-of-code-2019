@@ -42,11 +42,7 @@ const hasSinglePair = str => {
 };
 
 let possiblePasswords = _.range(start, end).filter(num =>
-  [hasSameAdjacent, isNotDecreasing].every(fn => fn(num.toString())),
-);
-
-possiblePasswords = possiblePasswords.filter(password =>
-  hasSinglePair(password.toString()),
+  [hasSameAdjacent, isNotDecreasing, hasSinglePair].every(fn => fn(num.toString())),
 );
 
 console.log(possiblePasswords.length);
