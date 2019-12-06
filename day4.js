@@ -19,7 +19,7 @@ const isNotDecreasing = str => {
 };
 
 // Less proud of this one, could probably be more concise.
-const hasPairsNoTriplets = str => {
+const hasSinglePair = str => {
   const pairs = [];
 
   for (let i = 0; i < str.length - 1; i++) {
@@ -46,7 +46,7 @@ let possiblePasswords = _.range(start, end).filter(num =>
 );
 
 possiblePasswords = possiblePasswords.filter(password =>
-  hasPairsNoTriplets(password.toString()),
+  hasSinglePair(password.toString()),
 );
 
 console.log(possiblePasswords.length);
